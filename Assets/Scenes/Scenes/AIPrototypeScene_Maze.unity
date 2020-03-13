@@ -774,6 +774,51 @@ PrefabInstance:
       propertyPath: m_Name
       value: xbot
       objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0006736767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000022158684
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000007132908
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06751662
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.015995594
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7814502684447367421, guid: 58628a0801dc160498e60301bbe5e945,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58628a0801dc160498e60301bbe5e945, type: 3}
 --- !u!1 &1255065797
@@ -1453,3 +1498,22 @@ MonoBehaviour:
   DiscoveryState: 0
   ChaseState: 0
   KillState: 0
+--- !u!95 &2046410676
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046410672}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95d0f56ca7acfd147a083b6dd697cec7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
