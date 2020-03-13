@@ -53,10 +53,30 @@ public class MonsterBehaviour2 : MonoBehaviour
         {
             return;
         }
+
+        agent.destination = Waypoint[curntPoint].transform.position;
+
+        curntPoint = (curntPoint + 1) % Waypoint.Length;
+
+        IdleState = false;
+        RoamingState = true;
+        AlertedState = false;
+        InvestingState = false;
+        SearchState = false;
+        DiscoveryState = false;
+        ChaseState = false;
+        KillState = false;
+
+
     }
 
     void Update()
     {
-        
+        if(Pathfinding == false && RoamingState == true)
+        {
+            
+        }
+
+
     }
 }
