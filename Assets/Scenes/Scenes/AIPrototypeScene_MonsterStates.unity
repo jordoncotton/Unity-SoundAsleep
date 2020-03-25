@@ -617,6 +617,7 @@ MonoBehaviour:
   DiscoveryState: 0
   ChaseState: 0
   KillState: 0
+  isAni: 0
 --- !u!114 &1545957207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Waypoint:
   - {fileID: 1368160451}
-  - {fileID: 0}
+  - {fileID: 1707637951}
   Pathfinding: 0
   Ref: {x: 0, y: 0, z: 0}
   IdleState: 0
@@ -642,6 +643,7 @@ MonoBehaviour:
   DiscoveryState: 0
   ChaseState: 0
   KillState: 0
+  isAni: 0
 --- !u!1 &1670512995
 GameObject:
   m_ObjectHideFlags: 0

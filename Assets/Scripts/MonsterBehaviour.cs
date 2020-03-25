@@ -25,6 +25,9 @@ public class MonsterBehaviour : MonoBehaviour
     public bool ChaseState; //state of monster  when it runs towards the source of the noise
     public bool KillState; //state of monster  when it kills the player
 
+    public bool isAni;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,8 @@ public class MonsterBehaviour : MonoBehaviour
         DiscoveryState = false;
         ChaseState = false;
         KillState = false;
+
+        isAni = false;
 
 }
 
