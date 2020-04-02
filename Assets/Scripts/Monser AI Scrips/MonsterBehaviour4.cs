@@ -66,7 +66,22 @@ public class MonsterBehaviour4 : MonoBehaviour
 
             if (!agent.pathPending && agent.remainingDistance < 2)
             {
-                Pathfinding = true;
+
+                isAni = true;
+
+                if(isAni== true)
+                {
+                    AniTime -= Time.deltaTime;
+
+                    if(AniTime <= 0.0f)
+                    {
+                        isAni = false;
+
+                        Pathfinding = true;
+                    }
+
+                }
+                
             }
         }
         if (Pathfinding == true)
