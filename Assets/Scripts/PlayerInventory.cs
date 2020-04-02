@@ -15,7 +15,7 @@ namespace Cotton
         private GameManagerToggleInventoryUI inventoryUIScript;
         private float timeToPlaceInHands = 0.1f;
         private Transform currentlyHeldItem;
-        private int counter string buttonText;
+        //private int counter string buttonText;
     }
 }
 
