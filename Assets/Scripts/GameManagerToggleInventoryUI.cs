@@ -42,7 +42,7 @@ namespace Cotton
             }
         }
 
-        void ToggleInventoryUI()
+        public void ToggleInventoryUI()
         {
             if(inventoryUI != null)
             {
