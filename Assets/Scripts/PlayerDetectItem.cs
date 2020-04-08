@@ -46,7 +46,8 @@ namespace Cotton
         {
             if(Input.GetButtonDown(buttonPickup)&& Time.timeScale > 0 && itemInRange && itemAvailableForPickup.root.tag != GameManagerReferences._playerTag)
             {
-                Debug.Log("Pickup attempted");
+                //Debug.Log("Pickup attempted");
+                itemAvailableForPickup.GetComponent<ItemMaster>().CallEventPickupAction(rayTransformPivot);
             }
         }
 
