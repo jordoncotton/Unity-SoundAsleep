@@ -35,7 +35,6 @@ namespace Cotton
             if (EventObjectPickup != null)
             {
                 EventObjectPickup();
-                
             }
             playerMaster.CallEventInventoryChanged();
         }
