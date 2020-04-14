@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemTag : MonoBehaviour
+namespace Cotton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ItemTag : MonoBehaviour
     {
+        public string itemTag;
         
-    }
+        void OnEnable()
+        {
+            SetTag();
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void SetTag()
+        {
+            if(itemTag == "")
+            {
+                itemTag = "Untagged";
+            }
+
+            transform.tag = itemTag;
+        }
     }
 }
+
