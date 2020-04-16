@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class InteractBehaviour : MonoBehaviour
 {
-    public bool isActing;
+    public bool isActing /*= false*/;
 
-    void start()
+    void Start()
     {
-        isActing = false;
+        isActing = true;
     }
 
-    void update()
+    void Update()
     {
         if(isActing == true)
         {
-            transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime);
+            transform.Rotate(new Vector3 (15, 30, 45) * Time.deltaTime);
         }
     }
     public void OnTriggerEnter(Collider collider)
@@ -23,6 +23,8 @@ public class InteractBehaviour : MonoBehaviour
         if (collider.gameObject.CompareTag("Monster") && isActing == false)
         {
             isActing = true;
+
+            Debug.Log("n");
         }
 
         if (collider.gameObject.CompareTag("Monster") && isActing == true)
