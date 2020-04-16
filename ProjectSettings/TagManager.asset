@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SOUND
+  - Guffy
+  - Monster
   layers:
   - Default
   - TransparentFX
