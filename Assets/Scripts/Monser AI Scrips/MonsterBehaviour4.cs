@@ -58,7 +58,7 @@ public class MonsterBehaviour4 : MonoBehaviour
 
         if (isAni == false)
         {
-            AniTime = (3.0f);
+            AniTime = (1.0f);
         }
         if (Pathfinding == false)
         {
