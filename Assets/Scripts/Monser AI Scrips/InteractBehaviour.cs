@@ -47,7 +47,7 @@ public class InteractBehaviour : MonoBehaviour
 
         }
 
-        if (collider.gameObject.CompareTag("Player") && isActing == false && Delay <= 0.0f /*&& Input.GetKey(KeyCode.F)*/)
+        if (collider.gameObject.CompareTag("Player") && isActing == false && Delay <= 0.0f)
         {
             isActing = true;
 
@@ -57,7 +57,7 @@ public class InteractBehaviour : MonoBehaviour
 
         }
 
-        if (collider.gameObject.CompareTag("Player") && isActing == true && Delay <= 0.0f/*&& Input.GetKey(KeyCode.F)*/)
+        if (collider.gameObject.CompareTag("Player") && isActing == true && Delay <= 0.0f)
         {
             isActing = false;
 
@@ -67,6 +67,6 @@ public class InteractBehaviour : MonoBehaviour
 
         }
 
-        //Debug.Log("L");
+      
     }
 }
