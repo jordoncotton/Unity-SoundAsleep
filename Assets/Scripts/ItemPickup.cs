@@ -6,37 +6,29 @@ namespace Cotton
 {
     public class ItemPickup : MonoBehaviour
     {
-        //private ItemMaster itemMaster;
+        private ItemMaster itemMaster;
 
-        //void OnEnable()
-        //{
-        //    SetInitialReferences();
-        //    itemMaster.EventPickupAction += CarryOutPickupActions;
-        //}
-
-        //void OnDisable()
-        //{
-        //    itemMaster.EventPickupAction -= CarryOutPickupActions;
-        //}
-
-        //void SetInitialReferences()
-        //{
-        //    itemMaster = GetComponent<ItemMaster>();
-        //}
-
-        //void CarryOutPickupActions(Transform tParent)
-        //{
-        //    transform.SetParent(tParent);
-        //    itemMaster.CallEventObjectPickup();
-        //    transform.gameObject.SetActive(false);
-        //}
-
-        private void OnTriggerEnter(Collider other)
+        void OnEnable()
         {
-            if (other.gameObject.CompareTag("Pickup"))
-            {
-                gameObject.SetActive(false);
-            }
+            SetInitialReferences();
+            itemMaster.EventPickupAction += CarryOutPickupActions;
+        }
+
+        void OnDisable()
+        {
+            itemMaster.EventPickupAction -= CarryOutPickupActions;
+        }
+
+        void SetInitialReferences()
+        {
+            itemMaster = GetComponent<ItemMaster>();
+        }
+
+        void CarryOutPickupActions(Transform tParent)
+        {
+            transform.SetParent(tParent);
+            itemMaster.CallEventObjectPickup();
+            transform.gameObject.SetActive(false);
         }
     }
 }
