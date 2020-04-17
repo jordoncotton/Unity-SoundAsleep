@@ -40,7 +40,7 @@ namespace Cotton
             }
         }
 
-        public void CallEventMenuScene()
+        public void CallEventGoToMenuScene()
         {
             if(GoToMenuSceneEvent != null)
             {
