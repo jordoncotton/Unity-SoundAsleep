@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class FpsMovement : MonoBehaviour
 {
-    [SerializeField] private Camera headCam;
+    //[SerializeField] private Camera headCam;
 
     public float speed = 6.0f;
     public float gravity = -9.8f;
@@ -55,8 +55,8 @@ public class FpsMovement : MonoBehaviour
         rotationVert -= Input.GetAxis("Mouse Y") * sensitivityVert;
         rotationVert = Mathf.Clamp(rotationVert, minimumVert, maximumVert);
 
-        headCam.transform.localEulerAngles = new Vector3(
-            rotationVert, headCam.transform.localEulerAngles.y, 0
-        );
+        //headCam.transform.localEulerAngles = new Vector3(
+        //    rotationVert, headCam.transform.localEulerAngles.y, 0
+        //);
     }
 }
