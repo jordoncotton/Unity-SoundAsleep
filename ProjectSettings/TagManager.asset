@@ -9,6 +9,8 @@ TagManager:
   - Monster
   - ThrowArc
   - ThrowLine
+  - BALL
+  - CUBE
   layers:
   - Default
   - TransparentFX
