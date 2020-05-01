@@ -4,81 +4,95 @@ using UnityEngine;
 
 public class ThrowingBehaviour : MonoBehaviour
 {
+    private GameObject heldObj = null;
 
-    public GameObject ball;
+    private Rigidbody heldObjRB = null;
 
-    public GameObject cube;
+    //public GameObject ball;
 
-    public GameObject ballholdr;
+    //public GameObject cube;
 
-    public GameObject cubeholdr;
+    //public GameObject ballholdr;
 
-    public GameObject player;
+    //public GameObject cubeholdr;
 
-    public Rigidbody ballRB;
+    //public GameObject player;
 
-    public Rigidbody cubeRB;
+    //public Rigidbody ballRB;
 
-    public bool isHolding;
+    //public Rigidbody cubeRB;
 
-    public bool BallThrown;
+    //public bool isHolding;
 
-    public bool CubeThrown;
+    //public bool BallThrown;
 
-   // public Mesh ballMsh;
+    //public bool CubeThrown;
+
+   // // public Mesh ballMsh;
 
    // public Mesh cubeMsh;
     // Start is called before the first frame update
     void Start()
     {
-        ball.SetActive(false);
+        //ball.SetActive(false);
 
-        cube.SetActive(false);
+        //cube.SetActive(false);
 
-        //ballMsh = false;
+        ////ballMsh = false;
 
-        ballRB = ball.GetComponent<Rigidbody>();
 
-        cubeRB = cube.GetComponent<Rigidbody>();
+        //ballRB = ball.GetComponent<Rigidbody>();
 
-        ballRB.isKinematic = true;
+        //cubeRB = cube.GetComponent<Rigidbody>();
 
-        cubeRB.isKinematic = true;
+        //ballRB.isKinematic = true;
 
-        isHolding = false;
+        //cubeRB.isKinematic = true;
 
-        BallThrown = true;
+        //isHolding = false;
 
-        CubeThrown = true;
+        //BallThrown = true;
+
+        //CubeThrown = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && ballholdr.activeInHierarchy == false && BallThrown == false)
+
+        if(Input.GetKeyDown(KeyCode.Space) && heldObj != null)
         {
-            ball.transform.parent = null;
-            ballRB.isKinematic = false;
-            //ball.transform.rotation = player.transform.rotation;
-            ballRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+            heldObj.transform.parent = null;
 
-            isHolding = false;
-
-            BallThrown = true;
+            heldObjRB.isKinematic = false;
+            heldObjRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+            heldObj = null;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && cubeholdr.activeInHierarchy == false && CubeThrown == false)
-        {
+        //if(Input.GetKeyDown(KeyCode.Space) && ballholdr.activeInHierarchy == false && BallThrown == false)
+        //{
+        //    ball.transform.parent = null;
+        //    ballRB.isKinematic = false;
+        //    //ball.transform.rotation = player.transform.rotation;
+        //    ballRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
 
-            cube.transform.parent = null;
-            cubeRB.isKinematic = false;
-            //cube.transform.rotation = player.transform.rotation;
-            cubeRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+        //    isHolding = false;
 
-            isHolding = false;
+        //    BallThrown = true;
+        //}
 
-            CubeThrown = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && cubeholdr.activeInHierarchy == false && CubeThrown == false)
+        //{
+
+        //    cube.transform.parent = null;
+        //    cubeRB.isKinematic = false;
+        //    //cube.transform.rotation = player.transform.rotation;
+        //    cubeRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+
+        //    isHolding = false;
+
+        //    CubeThrown = true;
+        //}
 
     }
 
@@ -86,27 +100,44 @@ public class ThrowingBehaviour : MonoBehaviour
     {
         Debug.Log("p");
 
-        if(other.gameObject.tag == "CUBE" && isHolding == false)
+        if(heldObj == null)
         {
-            cubeholdr.SetActive(false);
+            ThrowablePropertiesBehaviour throwableProperties = other.gameObject.GetComponent<ThrowablePropertiesBehaviour>();
+            if (throwableProperties != null)
+            {
+                other.gameObject.SetActive(false);
 
-            isHolding = true;
+                heldObj = throwableProperties.heldObj;
 
-            cube.SetActive(true);
+                heldObj.SetActive(true);
 
-            CubeThrown = false;
+                heldObjRB = heldObj.GetComponent<Rigidbody>();
+                heldObjRB.isKinematic = true;
 
+
+            }
         }
+        //if(other.gameObject.tag == "CUBE" && isHolding == false)
+        //{
+        //    cubeholdr.SetActive(false);
 
-        if (other.gameObject.tag == "BALL" && isHolding == false)
-        {
-            ballholdr.SetActive(false);
+        //    isHolding = true;
 
-            isHolding = true;
+        //    cube.SetActive(true);
 
-            ball.SetActive(true);
+        //    CubeThrown = false;
 
-            BallThrown = false;
-        }
+        //}
+
+        //if (other.gameObject.tag == "BALL" && isHolding == false)
+        //{
+        //    ballholdr.SetActive(false);
+
+        //    isHolding = true;
+
+        //    ball.SetActive(true);
+
+        //    BallThrown = false;
+        //}
     }
 }

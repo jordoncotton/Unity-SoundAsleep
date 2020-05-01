@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -382,16 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8f8c28ec2aac341b4dbbb37b78675d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 985707951}
-  cube: {fileID: 1654433074}
-  ballholdr: {fileID: 559664388}
-  cubeholdr: {fileID: 1855558986}
-  player: {fileID: 86766349}
-  ballRB: {fileID: 985707956}
-  cubeRB: {fileID: 1654433079}
-  isHolding: 0
-  BallThrown: 0
-  CubeThrown: 0
 --- !u!1 &240263334
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +511,7 @@ GameObject:
   - component: {fileID: 559664389}
   - component: {fileID: 559664393}
   - component: {fileID: 559664394}
+  - component: {fileID: 559664395}
   m_Layer: 0
   m_Name: ball
   m_TagString: BALL
@@ -631,6 +622,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.0414416
   m_Center: {x: 0, y: 0.5414416, z: 0}
+--- !u!114 &559664395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559664388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a4e29973115242bf4a6bd6a731aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heldObj: {fileID: 985707951}
 --- !u!1 &674245817
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,7 +932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &985707952
 Transform:
   m_ObjectHideFlags: 0
@@ -1318,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1654433075
 Transform:
   m_ObjectHideFlags: 0
@@ -1423,6 +1427,7 @@ GameObject:
   - component: {fileID: 1855558987}
   - component: {fileID: 1855558991}
   - component: {fileID: 1855558992}
+  - component: {fileID: 1855558993}
   m_Layer: 0
   m_Name: block
   m_TagString: CUBE
@@ -1533,3 +1538,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5191853, y: 2.4792814, z: 1.955868}
   m_Center: {x: 0.2595927, y: 0.73964036, z: 0.47793406}
+--- !u!114 &1855558993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855558986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a4e29973115242bf4a6bd6a731aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heldObj: {fileID: 1654433074}
