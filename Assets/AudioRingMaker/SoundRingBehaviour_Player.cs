@@ -14,7 +14,7 @@ public class SoundRingBehaviour_Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) && Player.GetComponent<AudioSource>().enabled == false)
         {
 
             Debug.Log("O");
@@ -23,13 +23,67 @@ public class SoundRingBehaviour_Player : MonoBehaviour
 
         }
 
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+
+        if ( Input.GetKey(KeyCode.A) && Player.GetComponent<AudioSource>().enabled == false)
+        {
+
+            Debug.Log("O");
+
+            Player.GetComponent<AudioSource>().enabled = true;
+
+        }
+
+        if (Input.GetKey(KeyCode.S) && Player.GetComponent<AudioSource>().enabled == false)
+        {
+
+            Debug.Log("O");
+
+            Player.GetComponent<AudioSource>().enabled = true;
+
+        }
+
+        if (Input.GetKey(KeyCode.D) && Player.GetComponent<AudioSource>().enabled == false)
+        {
+
+            Debug.Log("O");
+
+            Player.GetComponent<AudioSource>().enabled = true;
+
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.W) && Player.GetComponent<AudioSource>().enabled == true)
         {
             Debug.Log("L");
 
             Player.GetComponent<AudioSource>().enabled = false;
 
         }
+
+        if (Input.GetKey(KeyCode.A) && Player.GetComponent<AudioSource>().enabled == true)
+        {
+            Debug.Log("L");
+
+            Player.GetComponent<AudioSource>().enabled = false;
+
+        }
+
+        if (Input.GetKey(KeyCode.S) && Player.GetComponent<AudioSource>().enabled == true)
+        {
+            Debug.Log("L");
+
+            Player.GetComponent<AudioSource>().enabled = false;
+
+        }
+
+        if (Input.GetKey(KeyCode.D) && Player.GetComponent<AudioSource>().enabled == true)
+        {
+            Debug.Log("L");
+
+            Player.GetComponent<AudioSource>().enabled = false;
+
+        }
+
 
     }
 
