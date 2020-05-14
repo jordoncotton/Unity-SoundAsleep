@@ -2103,6 +2103,9 @@ GameObject:
   - component: {fileID: 1777815638}
   - component: {fileID: 1777815643}
   - component: {fileID: 1777815642}
+  - component: {fileID: 1777815645}
+  - component: {fileID: 1777815644}
+  - component: {fileID: 1777815646}
   m_Layer: 0
   m_Name: Noisemaker1
   m_TagString: Untagged
@@ -2301,6 +2304,52 @@ MonoBehaviour:
   Echo: 20
   expand: 0
   expandable: 0
+--- !u!143 &1777815644
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777815637}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1777815645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777815637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981c897fea9f6724795f57ebc5fadef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 1
+  gravity: -9.8
+  moveDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &1777815646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777815637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc14961cf341a4c40824313a0e8cbcbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1777815637}
 --- !u!1 &1794408814
 GameObject:
   m_ObjectHideFlags: 0

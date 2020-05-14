@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 86766351}
   - component: {fileID: 86766350}
   - component: {fileID: 86766358}
+  - component: {fileID: 86766359}
   - component: {fileID: 86766357}
   m_Layer: 0
   m_Name: Capsule
@@ -190,10 +191,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: da46f70846df43b43927a27137609fb2, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -386,12 +387,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundSorc: {fileID: 86766351}
-  SoundRing: {fileID: 7071450371935664880}
-  bubble: {fileID: 9175421777345593153}
-  AttachmentObj: {fileID: 86766349}
-  Echo: 2
-  expand: 0
-  expandable: 0
 --- !u!114 &86766358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +399,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8f8c28ec2aac341b4dbbb37b78675d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &86766359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86766349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16a035115311064dba3ac3fac78dea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoundSorc: {fileID: 86766351}
+  SoundRing: {fileID: 7071450371935664880}
+  bubble: {fileID: 9175421777345593153}
+  AttachmentObj: {fileID: 86766349}
+  Echo: 0
+  expand: 0
+  expandable: 0
 --- !u!1 &240263334
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,6 +63,8 @@ public class SoundRingBehaviour : MonoBehaviour
         {
             SoundRing.SetActive(true);
 
+            bubble.SetActive(true);
+
             expandable = true;
 
         }
@@ -70,6 +72,8 @@ public class SoundRingBehaviour : MonoBehaviour
         if (SoundSorc.enabled == false)
         {
             SoundRing.SetActive(false);
+
+            bubble.SetActive(false);
 
             expandable = false;
         }

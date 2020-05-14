@@ -5,101 +5,32 @@ using UnityEngine.Audio;
 public class SoundRingBehaviour_Player : MonoBehaviour
 {
 
-    public AudioSource SoundSorc;
-
-    public GameObject SoundRing;
-
-    public GameObject bubble;
-
-    public GameObject AttachmentObj;
-
-    public int Echo;
-    //number by which we will multiply the volume to get the size of the sound ring
-
-    Vector3 RingSize;
-
-    Vector3 RingPosition;
-
-    Vector3 bubbleSize;
-
-   // Vector3 bubblePos;
-
-    public float expand;
-
-    public bool expandable;
-
-    void hold()
-    {
-
-    }
+    public GameObject Player;
 
     void Start()
     {
-        bubbleSize = new Vector3(0, 0, 0);
-
-        expand = 0.0f;
+        Player.GetComponent<AudioSource>().enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            Debug.Log("o");
 
-            SoundRing.transform.localScale = RingSize;
+            Debug.Log("O");
 
-            SoundRing.transform.position = RingPosition;
-
-            bubble.transform.localScale = bubbleSize;
-
-            //bubble.transform.position = bubblePos;
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                RingSize = new Vector3(Echo * SoundSorc.volume * 2, 0.1f, Echo * SoundSorc.volume * 2);
-            }
-
-            if(Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                RingSize = new Vector3(Echo * SoundSorc.volume, 0.1f, Echo * SoundSorc.volume);
-            }
-            bubbleSize = new Vector3(expand, expand, expand);
-
-
-            RingPosition = AttachmentObj.transform.position;
-
-
-            if (SoundSorc.enabled == true)
-            {
-                SoundRing.SetActive(true);
-
-                expandable = true;
-
-            }
-
-            if (SoundSorc.enabled == false)
-            {
-                SoundRing.SetActive(false);
-
-                expandable = false;
-            }
-
-            if (expandable == true)
-            {
-                expand = expand + Time.deltaTime * 7;
-
-                if (expand >= RingSize.x)
-                {
-                    expand = 0.0f;
-                }
-            }
+            Player.GetComponent<AudioSource>().enabled = true;
 
         }
 
-        else
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            bubbleSize = new Vector3(0, 0, 0);
+            Debug.Log("L");
 
-            expand = 0.0f;
+            Player.GetComponent<AudioSource>().enabled = false;
+
         }
+
     }
+
 }
