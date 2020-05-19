@@ -6,6 +6,7 @@ namespace Cotton
 {
     public class ItemMaster : MonoBehaviour
     {
+        [SerializeField]
         private PlayerMaster playerMaster;
 
         public delegate void GeneralEventHandler();

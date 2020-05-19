@@ -70,10 +70,10 @@ namespace Cotton
 
         void CheckIfHandsEmpty()
         {
-            if (currentlyHeldItem == null && listInventory.Count > 0)
-            {
-                StartCoroutine(PlaceItemInHands(listInventory[listInventory.Count - 1]));
-            }
+            //if (currentlyHeldItem == null && listInventory.Count > 0)
+            //{
+            //    StartCoroutine(PlaceItemInHands(listInventory[listInventory.Count - 1]));
+            //}
         }
 
         void ClearHands()
@@ -92,7 +92,7 @@ namespace Cotton
         public void ActiveInventoryItem(int inventoryIndex)
         {
             DeactiveAllInventoryItems();
-            StartCoroutine(PlaceItemInHands(listInventory[inventoryIndex]));
+            //StartCoroutine(PlaceItemInHands(listInventory[inventoryIndex]));
         }
 
         void DeactiveAllInventoryItems()

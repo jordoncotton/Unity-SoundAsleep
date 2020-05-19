@@ -24,7 +24,7 @@ namespace Cotton
             itemMaster = GetComponent<ItemMaster>();
         }
 
-        void CarryOutPickupActions(Transform tParent)
+        public void CarryOutPickupActions(Transform tParent)
         {
             transform.SetParent(tParent);
             itemMaster.CallEventObjectPickup();
