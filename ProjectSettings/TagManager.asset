@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
-  - Pickup
+  - SOUND
+  - Guffy
+  - Monster
+  - ThrowArc
+  - ThrowLine
+  - BALL
+  - CUBE
   layers:
   - Default
   - TransparentFX

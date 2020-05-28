@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
-    guid: ca14598db1f9b03458b566b81eca88ea
+    path: Assets/Scenes/Scenes/Prototyping/StartupScene.unity
+    guid: 155b1c4adef3c4448ba1a3a6dbfd1f0c
   - enabled: 1
-    path: Assets/Scenes/Testing_Brandon.unity
-    guid: 79aada17945f9ff4c8805f1067e5ec33
+    path: Assets/Scenes/Scenes/Prototyping/Lighting_scene_001.unity
+    guid: a400c5962f9a66940935729004c926cf
+  - enabled: 1
+    path: Assets/Scenes/Scenes/Prototyping/EndUpScene.unity
+    guid: 106b736ad2eb48349ad70115bf01af68
   m_configObjects: {}
