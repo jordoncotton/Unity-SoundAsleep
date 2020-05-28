@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SOUND
+  - Guffy
+  - Monster
+  - ThrowArc
+  - ThrowLine
+  - BALL
+  - CUBE
   layers:
   - Default
   - TransparentFX
