@@ -12,16 +12,10 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
         }
-        
-        else if(instance != null)
-        {
-            Destroy(gameObject);
-        }
     }
 
     public void CollectItem(int passedValue, GameObject passedObject)
     {
         passedObject.GetComponent<Renderer>().enabled = false;
-        Destroy(passedObject, 5.0f);
     }
 }
