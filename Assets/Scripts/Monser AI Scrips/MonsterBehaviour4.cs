@@ -124,6 +124,8 @@ public class MonsterBehaviour4 : MonoBehaviour
         {
 
             SceneManager.LoadScene(2);
+
+            Debug.Log("N");
         }
     }
 
