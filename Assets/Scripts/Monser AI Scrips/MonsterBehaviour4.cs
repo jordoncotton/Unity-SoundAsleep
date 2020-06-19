@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MonsterBehaviour4 : MonoBehaviour
 {
@@ -118,7 +119,14 @@ public class MonsterBehaviour4 : MonoBehaviour
         }
 
         //Debug.Log("N");
-    }
 
+        if(collider.gameObject.CompareTag("Player"))
+        {
+
+            SceneManager.LoadScene(2);
+
+            Debug.Log("N");
+        }
+    }
 
 }
