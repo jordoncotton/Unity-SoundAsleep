@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Environment/Kid's_room/Kids_dresser/kids dresser.fbx.meta
 guid: 7624a66727010684b8f670187b9d941b
+=======
+guid: a2bb434d77da9d246bee1cd9a6970932
+>>>>>>> origin/Juan:Assets/Environment/Living_Room/Recliner/ReclinerGreybox.fbx.meta
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
