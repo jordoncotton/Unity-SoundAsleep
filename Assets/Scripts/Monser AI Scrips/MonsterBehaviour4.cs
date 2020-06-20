@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class MonsterBehaviour4 : MonoBehaviour
 {
+    public Material MonstBody;
+
+    public Material MonstDress;
+
+    public Material MonstHair;
 
     public GameObject[] Waypoint;
 
@@ -20,7 +25,10 @@ public class MonsterBehaviour4 : MonoBehaviour
 
     public bool isAni;
 
+    public float Diss;
+
     private float AniTime;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +43,17 @@ public class MonsterBehaviour4 : MonoBehaviour
 
         Ref = new Vector3(0.0f, 0.0f, 0.0f);
 
-
+        Diss = 0.8f;
 
         isAni = false;
+
+        MonstBody.SetFloat("_Dissolve", Diss);
+
+        MonstDress.SetFloat("_Dissolve", Diss);
+
+        MonstHair.SetFloat("_Dissolve", Diss);
+
+
 
     }
 
@@ -84,6 +100,15 @@ public class MonsterBehaviour4 : MonoBehaviour
                 }
                 
             }
+
+                if (Diss > 0.0f)
+                {
+                Diss--;
+                }
+            {
+
+            }
+
         }
         if (Pathfinding == true)
         {
@@ -105,6 +130,12 @@ public class MonsterBehaviour4 : MonoBehaviour
                 }
                 
             }
+
+            if (Diss < 0.8f)
+            {
+                Diss++;
+            }
+
         }
     }
 
@@ -122,6 +153,10 @@ public class MonsterBehaviour4 : MonoBehaviour
 
         if(collider.gameObject.CompareTag("Player"))
         {
+            MonstBody.SetFloat("_Dissolve", 0.0f);
+
+            MonstDress.SetFloat("_Dissolve", 0.8f);
+
 
             SceneManager.LoadScene(2);
 
