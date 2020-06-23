@@ -62,10 +62,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 06953fee5e9bfb844b1aaaa818c3c46a,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 06953fee5e9bfb844b1aaaa818c3c46a,
         type: 3}
       propertyPath: m_Name
-      value: Vase_Tall_Mesh
+      value: Vase_Tall_Mesh Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 06953fee5e9bfb844b1aaaa818c3c46a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06953fee5e9bfb844b1aaaa818c3c46a, type: 3}

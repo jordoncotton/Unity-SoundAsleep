@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenes/Prototyping/StartupScene.unity
     guid: 155b1c4adef3c4448ba1a3a6dbfd1f0c
   - enabled: 1
-    path: Assets/Scenes/Scenes/Prototyping/Lighting_scene_001.unity
+    path: Assets/Scenes/Lighting_scene_001.unity
     guid: a400c5962f9a66940935729004c926cf
   - enabled: 1
     path: Assets/Scenes/Scenes/Prototyping/EndUpScene.unity
