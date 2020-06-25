@@ -26,7 +26,7 @@ public class ThrowingBehaviour : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        //Debug.Log("p");
+        Debug.Log("p");
 
         if (heldObj == null)
         {
