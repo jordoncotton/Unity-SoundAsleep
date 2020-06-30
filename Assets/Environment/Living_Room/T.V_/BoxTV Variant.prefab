@@ -62,10 +62,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2015309811984717247, guid: 719483640331a734b892d2c4618c7abd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 540905821ecfeb24a8c72323ce75d076, type: 2}
     - target: {fileID: -927199367670048503, guid: 719483640331a734b892d2c4618c7abd,
         type: 3}
       propertyPath: m_Name
-      value: BoxTV
+      value: BoxTV Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719483640331a734b892d2c4618c7abd, type: 3}
