@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9389e3781326f3341b4e74d493658e4b
+guid: d569b81f87d0f9b439712668d8a2ceba
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
@@ -21,7 +21,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
-      : rotation error = 0.201054 deg\n"
+      : rotation error = 0.190858 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
@@ -60,7 +60,7 @@ ModelImporter:
       takeName: Take 001
       internalID: 0
       firstFrame: 1
-      lastFrame: 24
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
