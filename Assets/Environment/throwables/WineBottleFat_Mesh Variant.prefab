@@ -62,10 +62,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 0a2f9b94ed4a85747a6365ac7e8cdbbf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d634e66f565a0b4e9b44dcf3abec146, type: 2}
     - target: {fileID: -927199367670048503, guid: 0a2f9b94ed4a85747a6365ac7e8cdbbf,
         type: 3}
       propertyPath: m_Name
-      value: WineBottleFat_Mesh
+      value: WineBottleFat_Mesh Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2f9b94ed4a85747a6365ac7e8cdbbf, type: 3}
