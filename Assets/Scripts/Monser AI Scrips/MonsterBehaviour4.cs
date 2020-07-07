@@ -117,7 +117,7 @@ public class MonsterBehaviour4 : MonoBehaviour
             Ref = collider.gameObject.transform.position;
         }
 
-        //Debug.Log("N");
+        Debug.Log("N");
     }
 
 
