@@ -5,18 +5,23 @@ using UnityEngine;
 public class MusicBoxBehaviour : MonoBehaviour
 {
 
-    public Animation MB;
+   // public Animation MB;
 
-    public bool IsPlaying;
+    public Animator MBAni;
+
+    //public bool IsPlaying;
 
     public AudioSource MBMusic;
+
+    public GameObject Box;
 
     // Start is called before the first frame update
     void Start()
     {
         MBMusic.enabled = false;
 
-        IsPlaying = false;
+        MBAni.enabled = false;
+        //IsPlaying = false;
     }
 
     // Update is called once per frame
@@ -26,12 +31,23 @@ public class MusicBoxBehaviour : MonoBehaviour
         {
             MBMusic.enabled = true;
 
-            IsPlaying = true;
+            MBAni.enabled = true;
+           // IsPlaying = true;
         }
 
-        if (IsPlaying == true)
+        if (Input.GetKeyUp(KeyCode.F))
         {
-            MB.Play();
+            MBMusic.enabled = false;
+
+            MBAni.enabled = false;
+
+            //IsPlaying = true;
         }
+
+
+        //if (IsPlaying == true)
+        //{
+        //    //MB.Play();
+        //}
     }
 }
