@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class MonsterBehaviour4 : MonoBehaviour
 {
+    public GameObject Banshee;
 
     public GameObject[] Waypoint;
 
@@ -21,6 +22,16 @@ public class MonsterBehaviour4 : MonoBehaviour
 
     private float AniTime;
 
+    public Animator animator;
+
+    public float walkSpeed;
+
+    public float runSpeed;
+
+    public float idelTimer;
+
+    public bool Running;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +45,17 @@ public class MonsterBehaviour4 : MonoBehaviour
 
         Ref = new Vector3(0.0f, 0.0f, 0.0f);
 
-
+        Running = false;
 
         isAni = false;
 
+        walkSpeed = 0.3f; 
+
+        runSpeed = 3.5f;
+
+        idelTimer = 0;
+
+        agent.speed = walkSpeed;
     }
 
     void NextPoint()
@@ -92,6 +110,8 @@ public class MonsterBehaviour4 : MonoBehaviour
 
                 if(isAni == true)
                 {
+
+                    Running = false;
                     AniTime -= Time.deltaTime;
 
                     if(AniTime <= 0.0f)
@@ -105,6 +125,32 @@ public class MonsterBehaviour4 : MonoBehaviour
                 
             }
         }
+
+        animator.SetFloat("Speed", agent.velocity.magnitude / runSpeed);
+
+        if (idelTimer > 0.0f)
+        {
+            idelTimer = idelTimer - Time.deltaTime;
+
+
+            agent.speed = 0.0f;
+        }
+
+        if (idelTimer <= 0.0f && Pathfinding == false)
+        {
+            idelTimer = 0.0f;
+
+            agent.speed = runSpeed;
+        }
+
+        if (idelTimer <= 0.0f && Pathfinding == true)
+        {
+            idelTimer = 0.0f;
+
+            agent.speed = walkSpeed;
+        }
+
+
     }
 
     public void OnTriggerEnter(Collider collider)
@@ -115,8 +161,21 @@ public class MonsterBehaviour4 : MonoBehaviour
             Pathfinding = false;
 
             Ref = collider.gameObject.transform.position;
+
+            Running = true;
+
+            idelTimer = 2.458f;
+
+            animator.SetTrigger("Alerted");
         }
 
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            animator.SetTrigger("Attack");
+
+            idelTimer = 1.417f;
+        }
+      
         Debug.Log("N");
     }
 

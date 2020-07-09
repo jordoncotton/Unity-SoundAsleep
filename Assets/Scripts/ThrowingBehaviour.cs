@@ -18,7 +18,7 @@ public class ThrowingBehaviour : MonoBehaviour
             heldObj.transform.parent = null;
 
             heldObjRB.isKinematic = false;
-            heldObjRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+            heldObjRB.AddRelativeForce(new Vector3(4, 4, 0), ForceMode.Impulse);
             heldObj = null;
         }
 
