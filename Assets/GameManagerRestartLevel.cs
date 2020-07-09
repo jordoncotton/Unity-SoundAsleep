@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class GameManagerRestartLevel : MonoBehaviour
+namespace Cotton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManagerRestartLevel : MonoBehaviour
     {
-        
-    }
+        private GameManagerMaster gameManagerMaster;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void OnEnable()
+        {
+            SetInitialReferences();
+            gameManagerMaster.RestartLevelEvent += RestartLevel;
+        }
+
+
+        void OnDisable()
+        {
+            gameManagerMaster.RestartLevelEvent -= RestartLevel;
+        }
+
+        void SetInitialReferences()
+        {
+            gameManagerMaster = GetComponent<GameManagerMaster>();
+        }
+
+        void RestartLevel()
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 }
+

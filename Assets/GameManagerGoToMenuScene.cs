@@ -1,18 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class GameManagerGoToMenuScene : MonoBehaviour
+namespace Cotton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManagerGoToMenuScene : MonoBehaviour
     {
-        
-    }
+        private GameManagerMaster gameManagerMaster;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        void OnEnable()
+        {
+            SetInitialReferences();
+            gameManagerMaster.GoToMenuSceneEvent += GoToMenuScene;
+        }
+
+        void OnDisable()
+        {
+            gameManagerMaster.GoToMenuSceneEvent -= GoToMenuScene;
+        }
+
+        void SetInitialReferences()
+        {
+            gameManagerMaster = GetComponent<GameManagerMaster>();
+        }
+
+        void GoToMenuScene()
+        {
+            Application.LoadLevel(0);
+        }
     }
 }
+

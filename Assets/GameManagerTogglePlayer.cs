@@ -1,18 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
-public class GameManagerTogglePlayer : MonoBehaviour
+namespace Cotton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManagerTogglePlayer : MonoBehaviour
     {
-        
-    }
+        public FirstPersonController playerController;
+        private GameManagerMaster gameManagerMaster;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnEnable()
+        {
+            SetInitialReferences();
+            gameManagerMaster.MenuToggleEvent += TogglePlayerController;
+            gameManagerMaster.InventoryUIToggleEvent += TogglePlayerController;
+        }
+
+        private void OnDisable()
+        {
+            gameManagerMaster.MenuToggleEvent -= TogglePlayerController;
+            gameManagerMaster.InventoryUIToggleEvent -= TogglePlayerController;
+        }
+
+        void SetInitialReferences()
+        {
+            gameManagerMaster = GetComponent<GameManagerMaster>();
+        }
+
+        void TogglePlayerController()
+        {
+            if (playerController != null)
+            {
+                playerController.enabled = !playerController.enabled;
+            }
+        }
     }
 }
+

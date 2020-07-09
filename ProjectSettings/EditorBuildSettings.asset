@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scenes/Prototyping/EndUpScene.unity
     guid: 106b736ad2eb48349ad70115bf01af68
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0f75c5e4eae0fc14cbd28af5828eb4f8
+  - enabled: 1
     path: Assets/Scenes/House_scene.unity
     guid: 36ab366a1482b2a40bff649d328da84a
   m_configObjects: {}
