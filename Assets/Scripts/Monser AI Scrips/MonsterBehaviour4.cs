@@ -32,6 +32,13 @@ public class MonsterBehaviour4 : MonoBehaviour
 
     public bool Running;
 
+
+    public AudioSource walker;
+    public AudioSource runner;
+
+    public AudioSource Crying;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +63,12 @@ public class MonsterBehaviour4 : MonoBehaviour
         idelTimer = 0;
 
         agent.speed = walkSpeed;
+
+        walker.enabled = true;
+
+        runner.enabled = false;
+
+        Crying.enabled = false;
     }
 
     void NextPoint()
@@ -141,6 +154,12 @@ public class MonsterBehaviour4 : MonoBehaviour
             idelTimer = 0.0f;
 
             agent.speed = runSpeed;
+
+            Crying.enabled = false;
+
+            walker.enabled = false;
+
+            runner.enabled = true;
         }
 
         if (idelTimer <= 0.0f && Pathfinding == true)
@@ -148,6 +167,13 @@ public class MonsterBehaviour4 : MonoBehaviour
             idelTimer = 0.0f;
 
             agent.speed = walkSpeed;
+
+            Crying.enabled = false;
+
+            walker.enabled = true;
+
+            runner.enabled = false;
+
         }
 
 
@@ -167,6 +193,8 @@ public class MonsterBehaviour4 : MonoBehaviour
             idelTimer = 2.458f;
 
             animator.SetTrigger("Alerted");
+
+            Crying.enabled = true;
         }
 
         if (collider.gameObject.CompareTag("Player"))
