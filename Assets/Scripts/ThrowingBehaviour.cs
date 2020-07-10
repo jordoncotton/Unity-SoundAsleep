@@ -18,7 +18,7 @@ public class ThrowingBehaviour : MonoBehaviour
             heldObj.transform.parent = null;
 
             heldObjRB.isKinematic = false;
-            heldObjRB.AddForce(new Vector3(4, 4, 0), ForceMode.Impulse);
+            heldObjRB.AddRelativeForce(new Vector3(4, 4, 0), ForceMode.Impulse);
             heldObj = null;
         }
 
@@ -26,7 +26,7 @@ public class ThrowingBehaviour : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        Debug.Log("p");
+        //Debug.Log("p");
 
         if (heldObj == null)
         {
