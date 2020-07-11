@@ -1,18 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class GameManagerGameOver : MonoBehaviour
+namespace Cotton
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameManagerGameOver : MonoBehaviour
     {
-        
-    }
+        private GameManagerMaster gameManagerMaster;
+        public GameObject panelGameOver;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void OnEnable()
+        {
+            SetInitialReferences();
+            gameManagerMaster.GameOverEvent += TurnOnGameOverPanel;
+        }
+
+        private void OnDisable()
+        {
+            gameManagerMaster.GameOverEvent -= TurnOnGameOverPanel;
+        }
+
+        void SetInitialReferences()
+        {
+            gameManagerMaster = GetComponent<GameManagerMaster>();
+        }
+
+        void TurnOnGameOverPanel()
+        {
+            if (panelGameOver != null)
+            {
+                panelGameOver.SetActive(true);
+            }
+        }
     }
 }
+

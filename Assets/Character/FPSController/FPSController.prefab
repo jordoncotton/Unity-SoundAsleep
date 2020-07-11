@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 849089429358940871}
   - component: {fileID: 849089429358940868}
   - component: {fileID: 2065385230452826360}
+  - component: {fileID: 8702205647641630085}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Untagged
@@ -251,6 +252,19 @@ MonoBehaviour:
   inventoryPlayerParent: {fileID: 0}
   inventoryUIParent: {fileID: 0}
   uiButton: {fileID: 0}
+--- !u!114 &8702205647641630085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849089429358940879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a90ea3d740820542b5a612dc38b3f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
 --- !u!1 &849089429443179797
 GameObject:
   m_ObjectHideFlags: 0
