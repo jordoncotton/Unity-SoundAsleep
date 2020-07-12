@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849089428174343648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 849089429358940871}
   - component: {fileID: 849089429358940868}
   - component: {fileID: 2065385230452826360}
-  - component: {fileID: 8702205647641630085}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Untagged
@@ -234,9 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToDetect:
     serializedVersion: 2
-    m_Bits: 0
-  rayTransformPivot: {fileID: 0}
-  buttonPickup: 
+    m_Bits: 1024
+  rayTransformPivot: {fileID: 849089429358940865}
+  buttonPickup: PickUpItem
 --- !u!114 &2065385230452826360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,22 +248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a94390d5a7ef4b98036c7de695a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPlayerParent: {fileID: 0}
+  inventoryPlayerParent: {fileID: 849089429358940865}
   inventoryUIParent: {fileID: 0}
-  uiButton: {fileID: 0}
---- !u!114 &8702205647641630085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849089429358940879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a90ea3d740820542b5a612dc38b3f63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 100
+  uiButton: {fileID: 1897155443790487142, guid: 1f7e1679a1467944b95c2a83aa47b71e,
+    type: 3}
 --- !u!1 &849089429443179797
 GameObject:
   m_ObjectHideFlags: 0
