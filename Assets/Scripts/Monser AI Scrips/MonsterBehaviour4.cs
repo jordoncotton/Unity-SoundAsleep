@@ -38,6 +38,7 @@ public class MonsterBehaviour4 : MonoBehaviour
 
     public AudioSource Crying;
 
+    public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +70,8 @@ public class MonsterBehaviour4 : MonoBehaviour
         runner.enabled = false;
 
         Crying.enabled = false;
+
+        gameOver.SetActive(false);
     }
 
     void NextPoint()
@@ -202,6 +205,8 @@ public class MonsterBehaviour4 : MonoBehaviour
             animator.SetTrigger("Attack");
 
             idelTimer = 1.417f;
+
+            gameOver.SetActive(true);
         }
       
         Debug.Log("N");
