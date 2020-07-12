@@ -34,6 +34,7 @@ public class ImpactBehaviour : MonoBehaviour
     {
         if(collider.gameObject.CompareTag("Ground"))
         {
+            Debug.Log("Q");
             impact.enabled = true;
 
             Duration = 3.0f;

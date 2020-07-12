@@ -12,6 +12,7 @@ TagManager:
   - BALL
   - CUBE
   - Item
+  - Ground
   layers:
   - Default
   - TransparentFX
